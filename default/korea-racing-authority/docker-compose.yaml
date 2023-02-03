@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  koreaexim:
+    image: docker.items.com/korea-racing-authority
+    container_name: korea-racing-authority
+    build: .
+    command: tail -f /dev/null
+    volumes:
+      - ./src:/src_share
+    # environment:
+    #   HADOOP_NAMENODE_URL: 192.168.1.7
+    # dns: 
+    #   - 192.168.1.4
